@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'realtimeNgTable'`, () => {
+  it(`should have as title 'AngularRealtimeTable'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('realtimeNgTable');
+    expect(app.title).toEqual('AngularRealtimeTable');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to realtimeNgTable!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to AngularRealtimeTable!');
   });
 });

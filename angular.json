@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "realtimeNgTable:build"
+            "browserTarget": "AngularRealtimeTable:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "realtimeNgTable:build:production"
+              "browserTarget": "AngularRealtimeTable:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "realtimeNgTable:build"
+            "browserTarget": "AngularRealtimeTable:build"
           }
         },
         "test": {
@@ -96,7 +96,7 @@
         }
       }
     },
-    "realtimeNgTable-e2e": {
+    "AngularRealtimeTable-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -105,11 +105,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "realtimeNgTable:serve"
+            "devServerTarget": "AngularRealtimeTable:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "realtimeNgTable:serve:production"
+              "devServerTarget": "AngularRealtimeTable:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "realtimeNgTable"
+  "defaultProject": "AngularRealtimeTable"
 }
