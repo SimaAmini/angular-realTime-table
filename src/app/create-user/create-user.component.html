@@ -1,0 +1,55 @@
+<h1>Create User</h1>
+<form (submit)="onSubmit()" [formGroup]="userForm">
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input
+      formControlName="firstName"
+      type="text"
+      class="form-control"
+      id="firstName"
+      placeholder="firstName"
+    />
+    <small
+      *ngIf="userForm.get('firstName').hasError('required')"
+      class="form-text text-danger"
+      >First name is required.</small
+    >
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input
+      formControlName="lastName"
+      type="text"
+      class="form-control"
+      id="lastName"
+      placeholder="lastName"
+    />
+    <small
+      *ngIf="userForm.get('lastName').hasError('required')"
+      class="form-text text-danger"
+      >Last name is required.</small
+    >
+  </div>
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input
+    formControlName="age"
+    type="text"
+    class="form-control"
+    id="age"
+    placeholder="age"
+  />
+  <small
+    *ngIf="userForm.get('age').hasError('required')"
+    class="form-text text-danger"
+    >Age is required.</small
+  >
+  </div>
+  <button
+    type="submit"
+    [disabled]="loading || userForm.invalid"
+    class="btn btn-primary"
+  >
+    {{ loading ? 'Adding' : 'Add' }}
+  </button>
+</form>

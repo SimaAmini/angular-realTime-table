@@ -1,0 +1,29 @@
+<h1>Users</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>
+        <span *ngIf="user.new" class="badge badge-primary">new</span>
+        {{ user.firstName }} {{ user.lastName }}
+      </td>
+      <td>{{ user.age }}</td>
+      <td>{{ user.createdAt | date: 'yyyy/mm/dd' }}</td>
+      <td>
+        <button class="btn btn-danger" (click)="delete(user)">
+          <span class="oi oi-trash"></span>
+        </button>
+      </td>
+    </tr>
+    <tr *ngIf="loading">
+      <td colspan="5" align="center">Fetching Users</td>
+    </tr>
+  </tbody>
+</table>
